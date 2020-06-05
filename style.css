@@ -14,6 +14,8 @@ body {
     width: 75%;
     flex-direction: column;
     display: flex;
+    border: black solid 3px;
+    flex-wrap: wrap;
 }
 .arriba {
     display: flex;
@@ -23,9 +25,10 @@ body {
 }
 .centro {
     height: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: center;    
+}
+.mesa {
+    position: static;
 }
 .abajo {
     height: 25%;
@@ -35,9 +38,6 @@ body {
 }
 .abajo img {
     -webkit-transform: rotate(180deg);
-}
-.silla {
-    margin: 1%;
 }
 .izquierda {
     -webkit-transform: rotate(270deg);
