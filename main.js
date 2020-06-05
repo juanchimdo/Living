@@ -1,52 +1,48 @@
 window.onload = function () {
-
-    const wrap = document.querySelector('.wrap')
-
-
-
     const arriba = document.querySelector('.arriba')
-    const centro = document.querySelector('.centro')
     const abajo = document.querySelector('.abajo')
     const izquierda = document.querySelector('.izquierda')
     const derecha = document.querySelector('.derecha')
-
-
     const mas = document.querySelector('.mas')
     const menos = document.querySelector('.menos')
 
-    function agregarSilla () {
-        contador = document.querySelectorAll('.silla').length
-        if (contador < 3) {
-            const silla = document.createElement ('img')
-            silla.src = "silla.png"
-            silla.classList.add('silla')
-            arriba.append(silla)
-        }else if (contador < 4) {
-            const silla = document.createElement ('img')
-            silla.src = "silla.png"
-            silla.classList.add('silla', 'izquierda')
-            izquierda.append(silla)
-        }else if (contador < 5) {
-            const silla = document.createElement ('img')
-            silla.src = "silla.png"
-            silla.classList.add('silla', 'derecha')
-            derecha.append(silla)
-        }else if (contador < 8) {
-            const silla = document.createElement ('img')
-            silla.src = "silla.png"
-            silla.classList.add('silla')
-            abajo.append(silla)
-        }
-        console.log(contador)
-    }
+    let aleatorio = Math.floor((Math.random() * 8) + 1)
 
+    function agregarSilla () {
+        const sillasActuales = document.querySelectorAll('.silla').length
+        let aleatorio = Math.floor((Math.random() * 8) + sillasActuales)
+        if (contador < 3) { 
+            nuevaSilla(arriba)
+        }else if (contador < 4) {
+            nuevaSilla(izquierda, 'izquierda')
+        }else if (contador < 5) {
+            nuevaSilla(derecha, 'derecha')
+        }else if (contador < 8) {
+            nuevaSilla(abajo)
+        }
+    }
     function quitarSilla () {
         const imagenes = document.querySelectorAll('.silla')
         imagenes[imagenes.length-1].remove()
-        console.log(contador)
     }
-
-
     mas.addEventListener('click', agregarSilla)
     menos.addEventListener('click', quitarSilla)
 }
+
+
+
+
+
+
+function nuevaSilla (lugar, clase) {
+    const silla = document.createElement ('img')
+    silla.src = "silla.png"
+    silla.classList.add('silla', clase)
+    lugar.append(silla)
+}
+
+
+// 1=arriba
+// 2=derecha
+// 3=izquierda
+// 4=abajo
