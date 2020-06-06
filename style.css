@@ -15,7 +15,6 @@ body {
     flex-direction: column;
     display: flex;
     border: black solid 3px;
-    flex-wrap: wrap;
 }
 .arriba {
     display: flex;
@@ -23,22 +22,29 @@ body {
     justify-content: center;
     align-items: flex-end;
 }
+.arriba img {
+    max-width: 33%;
+    max-height: 100%;
+}
 .centro {
     height: 50%;
     display: flex;
     justify-content: center;    
+    align-items: center;
+}
+.centro img {
+    max-height: 100%;
 }
 .izquierda {
-    display: flex;
-    align-items: center;
+    -webkit-transform: rotate(270deg);
+    max-width: 25%;
 }
 .mesa {
-    align-self: center;
-    display: inline-block;
+    max-width: 50%;
 }
 .derecha {
-    display: flex;
-    align-items: center;
+    -webkit-transform: rotate(90deg);
+    max-width: 25%;
 }
 .abajo {
     height: 25%;
@@ -48,16 +54,9 @@ body {
 }
 .abajo img {
     -webkit-transform: rotate(180deg);
-    display: inline-block;
-}
-.izquierda img{
-    -webkit-transform: rotate(270deg);
-    display: inline-block;
-}
-.derecha img{
-    -webkit-transform: rotate(90deg);
-}
-img {
-    max-width: 100%;
+    max-width: 33%;
     max-height: 100%;
+}
+.oculto {
+    visibility: hidden;
 }
