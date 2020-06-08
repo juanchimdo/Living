@@ -8,54 +8,75 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+}
+.botones {
+    display: flex;
+    flex-direction: row;
+    height: 10%;
+    width: 60%;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+button {
+    border-radius: 100%;
+    font-size: 3em;
+    height: 100%;
+    width: 8%;
+    border: none;
+}
+.mas {
+    background: rgb(5, 196, 5);
+}
+.menos {
+    background: red;
 }
 .wrap {
     height: 75%;
-    width: 75%;
-    flex-direction: column;
+    width: 60%;
     display: flex;
-    border: black solid 3px;
+    flex-direction: column;
 }
 .arriba {
     display: flex;
-    height: 25%;
     justify-content: center;
     align-items: flex-end;
-}
-.arriba img {
-    max-width: 33%;
-    max-height: 100%;
+    height: 25%;
 }
 .centro {
-    height: 50%;
     display: flex;
     justify-content: center;    
     align-items: center;
+    height: 50%;
 }
-.centro img {
+.abajo {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 25%;
+}
+.silla {
     max-height: 100%;
+}
+.arriba .silla {
+    max-width: 33%;
 }
 .izquierda {
     -webkit-transform: rotate(270deg);
-    max-width: 25%;
 }
 .mesa {
+    max-height: 100%;
     max-width: 50%;
 }
 .derecha {
     -webkit-transform: rotate(90deg);
+}
+.centro .silla {
     max-width: 25%;
 }
-.abajo {
-    height: 25%;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-}
-.abajo img {
+.abajo .silla {
     -webkit-transform: rotate(180deg);
     max-width: 33%;
-    max-height: 100%;
 }
 .oculto {
     visibility: hidden;
