@@ -2,11 +2,9 @@ window.onload = function () {
     const mas = document.querySelector('.mas')
     const menos = document.querySelector('.menos')
 
-
     function agregarSilla () {
-        if (document.querySelectorAll('.visible').length<8) {
-            const sillasActuales = document.querySelectorAll('.visible').length
-            const ocultas = 8 - sillasActuales
+        const ocultas = document.querySelectorAll('.oculto').length
+        if (ocultas>0) {
             const random = Math.floor((Math.random() * ocultas) + 1)-1
             const silla = document.querySelectorAll('.oculto')[random]
             silla.classList.remove('oculto')
@@ -15,15 +13,14 @@ window.onload = function () {
     }
 
     function quitarSilla () {
-        if (document.querySelectorAll('.visible').length>0) {
-            const sillasActuales = document.querySelectorAll('.visible').length
-            const random = Math.floor((Math.random() * sillasActuales) + 1)-1
+        const visibles = document.querySelectorAll('.visible').length
+        if (visibles>0) {
+            const random = Math.floor((Math.random() * visibles) + 1)-1
             const silla = document.querySelectorAll('.visible')[random]
             silla.classList.add('oculto')
             silla.classList.remove('visible')
         }
     }
-
 
     mas.addEventListener('click', agregarSilla)
     menos.addEventListener('click', quitarSilla)
