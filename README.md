@@ -9,10 +9,11 @@ Cómo funciona:
    Incorporé la mesa y las sillas dentro del HTML con 2 clases para las sillas:
    
     - 'silla' : para darle estilo en css
-    - 'oculto' : solo para darle el atributo 'visibility = hidden' y permanezcan
-    ocultas
+    - 'oculto' : solo para darle el atributo
+    'visibility = hidden' y permanezcan ocultas
     
-    - 'izquierda' y 'derecha' son sólo para girar las imágenes
+    - 'izquierda' y 'derecha' son sólo para 
+    girar las imágenes
    
   El funcionamiento es sencillo. Al apretar los botones cambiará la clase de una de 
   las sillas de 'oculto' a 'visible' (esta clase no hace nada a priori, solo servirá 
