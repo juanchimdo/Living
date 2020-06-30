@@ -1,4 +1,4 @@
-<h1>LIVING v1.0<h1>
+# LIVING v1.0
 
 https://juanchimdo.github.io/Living-v1.0/
 
@@ -21,12 +21,3 @@ Cómo funciona:
   
   Lo especial de la función es que agregará y quitará sillas aleatoriamente.
   Además sólo utiliza una función a la cual se le asignan 2 parámetros.
-  
-  A tener en cuenta : Me es muy dificultoso trabajar con el css,más que nada en 
-  cuanto a los tamaños. En este caso use las flexbox pero aún asi no estoy del 
-  todo conforme. Las imágenes, así como los divs se deforman al cambiar el tamaño de 
-  la pantalla y no lo puedo dominar del todo.
-  
-  Tampoco estoy conforme con la estética (por ejemplo, los botones), pero le destine
-  mas del tiempo que debía a los estilos y no quise seguir profundizando en eso.
-
